@@ -1,0 +1,49 @@
+﻿C#企业级开发技术练习1答题卡
+
+班级：     信管一班
+姓名：     严飞艺
+学号：     20190307115
+
+注：请将答案放置在序号下方。*/
+
+（一）using System;
+
+namespace 作业1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s1 = "25天后:";
+            Console.WriteLine(s1);
+            string ds = "2020/2/20 18:10:20";
+            DateTime dt = DateTime.Parse(ds);
+            dt=dt.AddDays(25);
+            Console.WriteLine($"{dt.Year}年{dt.Month}月{dt.Day}日{dt.TimeOfDay}");
+            string s2 ="25天前：";
+            Console.WriteLine(s2);
+            string dn = "2020/2/20 02:10:20";
+            DateTime de = DateTime.Parse(dn);
+            de = de.AddDays(-25);
+            Console.WriteLine($"{de.Year}年{de.Month}月{de.Day}日{de.TimeOfDay}");
+        }
+    }
+}
+
+
+（二）using System;
+
+namespace 作业二
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int?[] arr = { 3, 7, null, 2, 5 };
+            int s = 1;
+            foreach (int? a in arr)
+                s *= a ?? 1;
+            Console.WriteLine(s);
+        }
+    }
+}
